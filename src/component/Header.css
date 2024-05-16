@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+}
+nav {
+  display: flex;
+  width: 90%;
+}
+
+.carimg {
+  margin-top: 5px;
+  width: 100px;
+  height: 50px;
+}
+
+.list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-width: 500px;
+  padding-right: 120px;
+}
+
+.item {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  color: #474747;
+}
+
+.orange {
+  color: #fa6616;
+}
+
+.service {
+  margin-top: 10px;
+  margin-bottom: 7px;
+  display: flex;
+}
+
+.btn {
+  width: 100px;
+  height: 50px;
+}
+
+.search {
+  width: 80px;
+  border: none;
+  background-color: white;
+}
+
+.search_img {
+  width: 55%;
+}
+
+.chat {
+  width: 80px;
+  height: 45px;
+  border-radius: 9px;
+  font-size: 15px;
+  background-color: white;
+  border-color: rgb(119, 119, 119);
+}
+
+.banner {
+  position: relative;
+}
+
+.banner-txt {
+  display: flex;
+  flex-direction: column;
+  background-color: #fddfcf;
+  padding: 50px 60px 80px 70px;
+}
+
+h2 {
+  line-height: 2;
+}
+
+.min10 {
+  line-height: 1.5;
+  font-weight: 300;
+  margin-top: 16px;
+}
+
+.upload {
+  width: 80px;
+  height: 30px;
+  font-weight: 400;
+  background-color: #fa6616;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+@media only screen and (min-width:1000px){
+  .upload{
+    cursor: pointer; /* pc에서만 커서가 바뀌도록 */
+  }
+}
+
+.banner-img {
+  width: 600px;
+  position: absolute;
+  top: 24%;
+  left: 55%;
+  right: 10%;
+}
