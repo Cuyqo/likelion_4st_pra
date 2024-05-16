@@ -1,9 +1,13 @@
 * {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* box-sizing을 설정하여 padding과 border가 크기에 포함되도록 */
 }
+
 nav {
   display: flex;
   width: 90%;
+  flex-wrap: nowrap; /* flex-wrap을 사용하여 요소가 줄을 바꿀 수 있게 */
 }
 
 .carimg {
@@ -14,19 +18,23 @@ nav {
 
 .list {
   display: flex;
+  flex-wrap: wrap; /* flex-wrap을 사용하여 리스트 아이템이 찌그러지지 않도록 */
   margin: 0;
   padding: 0;
   list-style: none;
   max-width: 500px;
-  padding-right: 120px;
+  padding-right: 150px;
 }
 
 .item {
-  margin-top: 10px;
-  font-size: 20px;
+  width: 100px;
+  margin-top: 20px;
+  font-size: 13px;
   font-weight: 500;
-  padding: 10px;
+  padding: 1px;
   color: #474747;
+  flex: 1; /* flex를 사용하여 아이템이 균등하게 분배되도록 */
+  text-align: center; /*  텍스트를 가운데 정렬 */
 }
 
 .orange {
@@ -95,8 +103,8 @@ h2 {
   margin-top: 20px;
 }
 
-@media only screen and (min-width:1000px){
-  .upload{
+@media only screen and (min-width: 1000px) {
+  .upload {
     cursor: pointer; /* pc에서만 커서가 바뀌도록 */
   }
 }
@@ -107,4 +115,77 @@ h2 {
   top: 24%;
   left: 55%;
   right: 10%;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carimg {
+    width: 80px;
+    height: 40px;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0;
+  }
+
+  .item {
+    margin-top: 5px;
+    font-size: 18px;
+    flex: none; /* 변경: flex를 none으로 설정하여 각 아이템이 개별적으로 처리되도록 */
+    width: 100%; /* 추가: 모바일에서는 각 아이템이 전체 너비를 차지하도록 */
+  }
+
+  .service {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .search {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .chat {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .banner {
+    text-align: center;
+  }
+
+  .banner-txt {
+    padding: 20px;
+  }
+
+  .banner-img {
+    width: 80%;
+    position: static;
+    margin: 0 auto;
+  }
+
+  .upload {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .min10 {
+    font-size: 14px;
+  }
 }
