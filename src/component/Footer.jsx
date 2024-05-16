@@ -1,5 +1,5 @@
 import './Footer.css';
-import icon from './images/banner-icon.png';
+import icon from '../images/banner-icon.png';
 
 export function Footer() {
   return (
